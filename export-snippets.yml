@@ -1,0 +1,499 @@
+- trigger: cl
+  scope: javascript
+  description: console.log
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        console.log(${1:obj});${2}
+
+- trigger: cd
+  scope: javascript
+  description: console.dir
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        console.dir(${1:obj});${2}
+
+- trigger: ce
+  scope: javascript
+  description: console.error
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        console.error(${1:obj});${2}
+
+- trigger: cll
+  scope: javascript
+  description: console.log
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        console.log('${1:obj}:', ${1:obj});${2}
+
+- trigger: cdd
+  scope: javascript
+  description: console.dir
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        console.dir('${1:obj}:', ${1:obj});${2}
+
+- trigger: cee
+  scope: javascript
+  description: console.error
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        console.error('${1:obj}:', ${1:obj});${2}
+
+- trigger: ae
+  scope: javascript
+  description: document.addEventListener
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.addEventListener('${2:event}', function(e) {
+          ${3}
+        });
+
+- trigger: ac
+  scope: javascript
+  description: document.appendChild
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.appendChild(${2:elem});${3}
+
+- trigger: rc
+  scope: javascript
+  description: document.removeChild
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.removeChild(${2:elem});${3}
+
+- trigger: cel
+  scope: javascript
+  description: document.createElement
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.createElement(${2:elem});${3}
+
+- trigger: gi
+  scope: javascript
+  description: document.getElementById
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.getElementById('${2:id}');${3}
+
+- trigger: gc
+  scope: javascript
+  description: document.getElementsByClassName
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.getElementsByClassName('${2:class}');${3}
+
+- trigger: gt
+  scope: javascript
+  description: document.getElementsByTagName
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.getElementsByTagName('${2:tag}');${3}
+
+- trigger: qs
+  scope: javascript
+  description: document.querySelector
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.querySelector('${2:selector}');${3}
+
+- trigger: qsa
+  scope: javascript
+  description: document.querySelectorAll
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:document}.querySelectorAll('${2:selector}');${3}
+
+- trigger: fe
+  scope: javascript
+  description: forEach
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:myArray}.forEach(function (${2:elem}) {
+          ${3}
+        });
+
+- trigger: fi
+  scope: javascript
+  description: for in
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        for (${1:prop} in ${2:obj}) {
+          if (${2:obj}.hasOwnProperty(${1:prop})) {
+            ${3}
+          }
+        }
+
+- trigger: fn
+  scope: javascript
+  description: function
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        function ${1:methodName} (${2:arguments}) {
+          ${3}
+        }
+
+- trigger: afn
+  scope: javascript
+  description: anonymous function
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        function (${1:arguments}) {
+          ${2}
+        }
+
+- trigger: pr
+  scope: javascript
+  description: prototype
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        ${1:ClassName}.prototype.${2:methodName} = function (${3:arguments}) {
+          ${4}
+        };
+
+- trigger: sw
+  scope: javascript
+  description: switch statement
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        switch(${1:expression}) {
+          case ${2:value}:
+            ${3}
+            break;
+          default:
+            break;
+        }
+
+- trigger: si
+  scope: javascript
+  description: setInterval
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        setInterval(function() {
+          ${2}
+        }, ${1:delay});
+
+- trigger: st
+  scope: javascript
+  description: setTimeout
+  tag: VanillaJS
+  tagHide: true
+  source: system
+  text: |
+        setTimeout(function() {
+          ${2}
+        }, ${1:delay});
+
+- trigger: props
+  description: props
+  scope: javascript
+  mTime: 1534952531587
+  text: |
+          props: {\r
+                  xx:""\r
+                }
+
+- description: 本地存储
+  scope: javascript
+  trigger: localStorage
+  mTime: 1534954156533
+  text: localStorage.xx
+- trigger: wlh
+  description: 跳转
+  scope: javascript
+  mTime: 1534954176564
+  text: |
+         window.location.href
+
+- trigger: import
+  description: import
+  scope: javascript
+  mTime: 1535032323056
+  text: |
+        import myjl from "../components/myjl"
+
+- trigger: alert
+  description: alert弹出款
+  scope: javascript
+  mTime: 1535253228744
+  text: |
+          this.$dialog.alert({\r
+                        title: '标题',\r
+                        message: '弹窗内容'\r
+                    }).then(() => {\r
+                        // on close\r
+                    });
+
+- trigger: cz_js
+  description: 路由传值
+  scope: javascript
+  mTime: 1535261095788
+  text: this.$route.query.id
+- trigger: jsonstr
+  description: jsonstr
+  scope: javascript
+  mTime: 1535810582846
+  text: JSON.stringify()
+- trigger: vhead
+  description: vhead
+  scope: html
+  mTime: 1534952402555
+  text: |
+        <section class="sd_jh_df mui-row pr cen ">\r
+        \r
+            <section class="df_jh_deer w100">\r
+                <span> </span>\r
+            </section>\r
+            <van-icon name="arrow-left" class=" sd_jh_eert ab cf" @click="$router.back(-1)" />\r
+        \r
+        \r
+        </section>\r
+        \r
+        <section class="dsf_jh_deer">\r
+        \r
+        </section>
+
+- trigger: vue
+  description: vue
+  scope: html
+  mTime: 1534952474873
+  text: |
+        <template>\r
+        \t<div >\r
+        \t\r
+        \r
+        \t</div>\r
+        </template>\r
+        <script>\r
+            export default {\r
+                data() {\r
+                    return {\r
+        \r
+                    }\r
+                },\r
+                components: {\r
+        \r
+                },\r
+                methods: {\r
+        \r
+                },\r
+                mounted() {\r
+        \r
+                },\r
+            }\r
+        \r
+        </script>\r
+        <style scoped>\r
+        \r
+        \r
+        </style>\r
+        
+
+- trigger: v-model
+  description: v-model
+  scope: html
+  mTime: 1534952505100
+  text: |
+        v-model="" 
+
+- trigger: vlunbo
+  description: 轮播图
+  scope: html
+  mTime: 1534953119875
+  text: |
+        <section class="pr dfg_rrert">\r
+            <van-swipe :autoplay="3000" class="h100">\r
+                <van-swipe-item v-for="sd in 5" class="h100">\r
+                    <img src="https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg" class="w100 h100">\r
+                </van-swipe-item>\r
+            </van-swipe>\r
+        </section>
+
+- trigger: vlibiao
+  description: 列表
+  scope: html
+  mTime: 1534953210778
+  text: |
+        <van-cell-group>\r
+            <van-cell title="单元格" value="内容" />\r
+            <van-cell title="单元格" is-link />\r
+        </van-cell-group>
+
+- trigger: vbtnred
+  description: 红色按钮
+  scope: html
+  mTime: 1534953265717
+  text: |
+        <van-button type="danger">危险按钮</van-button>
+
+- trigger: vbtnls
+  description: 绿色按钮
+  scope: html
+  mTime: 1534953289516
+  text: |
+        <van-button type="primary">主要按钮</van-button>
+
+- trigger: vbtn
+  description: 按钮
+  scope: html
+  mTime: 1534953304630
+  text: |
+        <van-button type="default">默认按钮</van-button>
+
+- trigger: vbtnkx
+  description: 空心的按钮
+  scope: html
+  mTime: 1534953366156
+  text: |
+        <van-button type="default" plain>默认按钮</van-button>
+
+- trigger: vrow
+  description: 栅格布局
+  scope: html
+  mTime: 1534953442675
+  text: |
+        <van-row>\r
+          <van-col span="8">span: 8</van-col>\r
+          <van-col span="8">span: 8</van-col>\r
+          <van-col span="8">span: 8</van-col>\r
+        </van-row>
+
+- trigger: vzedie
+  description: 折叠
+  scope: html
+  mTime: 1534953644195
+  text: |
+        <!--        data里添加  activeNames:[1]-->\r
+        <van-collapse v-model="activeNames">\r
+            <van-collapse-item title="有赞微商城" name="1">\r
+                提供多样店铺模板，快速搭建网上商城\r
+            </van-collapse-item>\r
+        </van-collapse>
+
+- trigger: vkaiguan
+  description: 开关
+  scope: html
+  mTime: 1534953801764
+  text: |
+        <!--        data里添加   checked: true-->\r
+        <van-switch v-model="checked" />
+
+- trigger: mlist
+  description: mui列表
+  scope: html
+  mTime: 1534953917155
+  text: |
+        \t<ul class="mui-table-view">\r
+        \t        <li class="mui-table-view-cell">\r
+        \t            <a class="mui-navigate-right">\r
+        \t                Item 1\r
+        \t            </a>\r
+        \t        </li>\r
+        \t    </ul>
+
+- trigger: mform
+  description: mui表单
+  scope: html
+  mTime: 1534953946924
+  text: |
+        <form class="mui-input-group">\r
+            <div class="mui-input-row">\r
+                <label>input</label>\r
+                <input type="text" class="mui-input-clear" placeholder="input">\r
+            </div>\r
+        </form>
+
+- trigger: vtabl
+  description: tab切换页
+  scope: html
+  mTime: 1534954033156
+  text: |
+        <van-tabs>\r
+            <van-tab v-for="index in 8" :title="'选项 ' + index">\r
+                内容 {{ index }}\r
+            </van-tab>\r
+        </van-tabs>
+
+- trigger: vxiala
+  description: 下拉框
+  scope: html
+  mTime: 1535134727399
+  text: |
+         <van-popup v-model="show_er" position="bottom" >\r
+        \r
+                     <van-picker\r
+                        show-toolbar\r
+                        :columns="columns"\r
+                        value-key="name"\r
+                        @cancel="show_er=false"\r
+                        @confirm="wancdrttx"/>\r
+        \r
+        \r
+                     </van-popup>
+
+- trigger: vfuxuankuan
+  description: 复选框-多选框
+  scope: html
+  mTime: 1535456059439
+  text: |
+         <van-checkbox v-model="checked">记住密码</van-checkbox> 
+
+- trigger: xuxian
+  description: 虚线
+  scope: css
+  mTime: 1535251364943
+  text: |
+        border-bottom: 1px dashed #e0e0e0; 
+
+- trigger: jianbian
+  description: 渐变
+  scope: css
+  mTime: 1535266477208
+  text: |
+        background: linear-gradient(to right,#FE7C40, #FF370C);
+

@@ -464,17 +464,7 @@
   scope: html
   mTime: 1535134727399
   text: |
-         <van-popup v-model="show_er" position="bottom" >\r
-        \r
-                     <van-picker\r
-                        show-toolbar\r
-                        :columns="columns"\r
-                        value-key="name"\r
-                        @cancel="show_er=false"\r
-                        @confirm="wancdrttx"/>\r
-        \r
-        \r
-                     </van-popup>
+         <van-popup v-model="show_er" position="bottom" >  <van-picker show-toolbar :columns="columns" value-key="name" @cancel="show_er=false"  @confirm="wancdrttx"/> </van-popup>
 
 - trigger: vfuxuankuan
   description: 复选框-多选框

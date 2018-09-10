@@ -1,0 +1,249 @@
+lunbo
+轮播图
+      <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/banner.jpg">
+                </div>
+                <div class="swiper-slide"> <img src="img/banner.jpg"></div>
+                <div class="swiper-slide"> <img src="img/banner.jpg"></div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+
+
+
+
+lunbo_js
+轮播图js
+ var mySwiper = new Swiper('.swiper-container', {
+
+            autoplay: 4000, //自动滑动 滚动速度
+            loop: true, //循环
+            pagination: '.swiper-pagination', //分页器的class的名字
+            paginationClickable: true, //点击标题跳转到指定的那页
+        })
+
+ebtn
+按钮
+<el-button type="primary"  >${1}</el-button>
+
+
+efrom
+表单
+     <el-form :model="ruleForm" :rules="rules" ref="ruleForm"  class="demo-ruleForm">
+            
+            <el-form-item  prop="">
+    <el-input v-model="" placeholder="${1}"></el-input>
+  </el-form-item>
+                    
+                     
+    </el-form>
+    
+    erow
+    
+    栅格布局
+    <el-row>
+  <el-col :span="12">${1}</el-col>
+  <el-col :span="12">${2}</el-col>
+</el-row>
+
+
+
+mform
+mui表单
+<form class="mui-input-group">
+    <div class="mui-input-row">
+        <label>input</label>
+        <input type="text" class="mui-input-clear" placeholder="input">
+    </div>
+</form>
+
+mlist
+mui列表
+<ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">
+                Item 1
+            </a>
+        </li>
+   </ul>
+   
+   
+   v-model
+   v-model
+   v-model="${1}" 
+   
+   
+   
+   vbtn
+   按钮
+   <van-button type="default">默认按钮</van-button>
+   
+   vbtnkx
+   空心的按钮
+   <van-button type="default" plain>默认按钮</van-button>
+   
+   
+   vbtnls
+   绿色按钮
+   <van-button type="primary">主要按钮</van-button>
+   
+   vbtnred
+   红色按钮
+   <van-button type="danger">危险按钮</van-button>
+   
+   vfuxuankuan
+   复选框-多选框
+   <van-checkbox v-model="checked">记住密码</van-checkbox> 
+   
+   vhead
+   vhead
+   <section class="sd_jh_df mui-row pr cen ">
+
+    <section class="df_jh_deer w100">
+        <span> </span>
+    </section>
+    <van-icon name="arrow-left" class=" sd_jh_eert ab cf" @click="$router.back(-1)" />
+
+
+</section>
+
+<section class="dsf_jh_deer">
+
+</section>
+
+
+vkaiguan
+开关
+<van-switch v-model="checked" />
+
+
+vlibiao
+列表
+<van-cell-group>
+    <van-cell title="单元格" value="内容" />
+    <van-cell title="单元格" is-link />
+</van-cell-group>
+
+vlunbo
+轮播图
+<section class="pr dfg_rrert">
+    <van-swipe :autoplay="3000" class="h100">
+        <van-swipe-item v-for="sd in 5" class="h100">
+            <img src="https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg" class="w100 h100">
+        </van-swipe-item>
+    </van-swipe>
+</section>
+
+vrow
+栅格布局
+<van-row>
+  <van-col span="8">span: 8</van-col>
+  <van-col span="8">span: 8</van-col>
+  <van-col span="8">span: 8</van-col>
+</van-row>
+
+
+
+vtabl
+tab切换页
+<van-tabs>
+    <van-tab v-for="index in 8" :title="'选项 ' + index">
+        内容 {{ index }}
+    </van-tab>
+</van-tabs>
+
+
+vue
+vue
+<template>
+<div >
+
+
+</div>
+</template>
+<script>
+    export default {
+        data() {
+            return {
+
+            }
+        },
+        components: {
+
+        },
+        methods: {
+
+        },
+        mounted() {
+
+        },
+    }
+
+</script>
+<style scoped>
+
+
+</style>
+
+vxiala
+下拉框
+
+<van-popup v-model="show_er" position="bottom" >  <van-picker show-toolbar :columns="columns" value-key="name" @cancel="show_er=false"  @confirm="wancdrttx"/> </van-popup>
+
+
+vzedie
+折叠
+<!--        data里添加  activeNames:[1]-->
+<van-collapse v-model="activeNames">
+    <van-collapse-item title="有赞微商城" name="1">
+        提供多样店铺模板，快速搭建网上商城
+    </van-collapse-item>
+</van-collapse>
+
+
+js
+
+alert
+alert弹出款
+this.$dialog.alert({
+              title: '标题',
+              message: '弹窗内容'
+          }).then(() => {
+              // on close
+          });
+
+
+cz_js
+路由传值
+this.$route.query.id
+
+import
+import
+import myjl from "../components/myjl"
+
+
+jsonstr
+jsonstr
+JSON.stringify(${1})
+
+localStorage
+本地存储
+localStorage.xx
+
+
+props
+props
+
+props: {
+        xx:""
+      }
+      
+      
+      wlh
+      跳转
+      window.location.href
